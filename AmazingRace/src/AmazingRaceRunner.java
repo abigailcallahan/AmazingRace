@@ -7,8 +7,11 @@ public class AmazingRaceRunner
 		static Scanner stringInput = new Scanner(System.in);
 		static Scanner intInput = new Scanner(System.in);
 		static int ruleDecision;
-		static String team1;
-		static String team2;
+		static Team team1;
+		static String team1name;
+		
+		static Team team2;
+		static String team2name;
 		static String enterToStart;
 		static String enterToTravel;
 		
@@ -17,7 +20,6 @@ public class AmazingRaceRunner
 			{
 				intro();
 				getTeams();
-
 			}
 		
 		
@@ -53,13 +55,21 @@ public class AmazingRaceRunner
 		public static void getTeams()
 		{
 			System.out.println("Team 1, what is your name?");
-			team1 = stringInput.nextLine();
-			System.out.println("Team 2, what is your name?");
-			team2 = stringInput.nextLine();
+			team1name = stringInput.nextLine();
+			team1 = new Team(team1name, 0);
 			
-			System.out.println("Welcome team " + team1 + " and team " + team2 + "!");
+			
+			System.out.println("Team 2, what is your name?");
+			team2name = stringInput.nextLine();
+			team2 = new Team(team2name, 0);
+			
+			
+			System.out.println("Welcome team " + team1name + " and team " + team2name + "!");
 			System.out.println("Press enter to travel to your first country");
 			enterToTravel = stringInput.nextLine();
 		}
 
+		
+		
+		
 	}
