@@ -2,16 +2,16 @@ public class Location
 	{
 		
 		private String country;
-		private String againstTeamGame;
-		private String againstOwnGame;
+		private String game1;
+		private String game2;
 		private String tieGame;
 		
 		
-		public Location(String c, String atg, String aog, String tg)
+		public Location(String c, String g1, String g2, String tg)
 		{
 			country = c; 
-			againstTeamGame = atg;
-			againstOwnGame = aog;
+			game1 = g1;
+			game2 = g2;
 			tieGame = tg;
 		}
 
@@ -28,27 +28,27 @@ public class Location
 			}
 
 
-		public String getAgainstTeamGame()
+		public String getGame1()
 			{
-				return againstTeamGame;
+				return game1;
 			}
 
 
-		public void setAgainstTeamGame(String againstTeamGame)
+		public void setGame1(String game1)
 			{
-				this.againstTeamGame = againstTeamGame;
+				this.game1 = game1;
 			}
 
 
-		public String getAgainstOwnGame()
+		public String getGame2()
 			{
-				return againstOwnGame;
+				return game2;
 			}
 
 
-		public void setAgainstOwnGame(String againstOwnGame)
+		public void setGame2(String game2)
 			{
-				this.againstOwnGame = againstOwnGame;
+				this.game2 = game2;
 			}
 
 
