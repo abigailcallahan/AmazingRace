@@ -25,7 +25,7 @@ public class Unscramble
 		
 		public static void unscramble()
 		{
-			UnscrambleArrayList.fillUnscrambleWords();
+			
 			System.out.println("since the two teams tied for the last two games, we play unscramble! Here is how it works: ");
 			System.out.println("\tI am going to give team 1 a word to unscramble. Then I am going to give team 2 a word with the same number of letters to unscramble.");
 			System.out.println("\tWhoever finishes their word first wins!");

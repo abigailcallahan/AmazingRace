@@ -1,0 +1,11 @@
+	A	B	C	D	E	F	G	H	I	J	K	L	M	
+1	b	d	f	g	i	o	p	b	d	c	e	r	y
+2	o	p	v	b	x	d	e	s	k	i	o	p	q
+3	b	h	f	s	o	p	k	b	u	w	d	c	s	
+4	j	k	s	j	l	y	t	r	e	x	s	o	l	
+5	v	k	o	p	e	r	c	a	k	u	y	t	r
+6	o	p	j	k	l	y	r	e	c	d	d	j	l	
+7	c	c	k	l	j	w	e	d	b	o	o	p	r
+8	k	d	e	f	l	o	p	e	f	d	s	e	f
+9	c	s	c	j	k	v	u	r	p	o	r	e	s	
+10	r	e	f	j	h	b	c	c	s	k	d	c	x

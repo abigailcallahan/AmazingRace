@@ -7,6 +7,7 @@ public class Team
 		private String name;
 		private int countryWins;
 		
+		
 		public Team(String n, int c)
 		{
 			name = n;

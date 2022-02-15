@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AmazingRaceRunner
@@ -16,11 +18,23 @@ public class AmazingRaceRunner
 		static String enterToTravel;
 		
 		
-		public static void main(String[] args)
+		//NEED TO DECIDE ON TIE GAME IN FIND LETTER 
+		//PLAY AGAIN
+		//OR
+		//PLAY THE UNSCRAMBLE BUT HAVE TO FIX THE POINTS/COUNTRY ETC
+		
+		
+		
+		public static void main(String[] args) throws IOException
 			{
+				UnscrambleArrayList.fillUnscrambleWords();
+				
 				intro();
 				getTeams();
 				TravelRunner.travel();
+			//DONT ADD ANYTHING ELSE HERE BECAUSE ITS ALL IN TRAVEL RUNNER CLASS
+				
+				
 			}
 		
 		
@@ -69,7 +83,10 @@ public class AmazingRaceRunner
 			System.out.println("Press enter to travel to your first country");
 			enterToTravel = stringInput.nextLine();
 		}
+		
+		
 
+		
 		
 		
 		
