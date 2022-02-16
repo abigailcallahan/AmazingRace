@@ -15,7 +15,6 @@ public class Location
 			tieGame = tg;
 		}
 
-
 		public String getCountry()
 			{
 				return country;

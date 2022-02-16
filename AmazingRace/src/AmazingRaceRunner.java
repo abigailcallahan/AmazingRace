@@ -28,6 +28,7 @@ public class AmazingRaceRunner
 		public static void main(String[] args) throws IOException
 			{
 				UnscrambleArrayList.fillUnscrambleWords();
+				Hangman.fillHangman();
 				
 				intro();
 				getTeams();
@@ -36,7 +37,6 @@ public class AmazingRaceRunner
 				
 				
 			}
-		
 		
 		public static void intro()
 		{
@@ -64,7 +64,7 @@ public class AmazingRaceRunner
 			System.out.println("There is two teams, and 5 different countries. ");
 			System.out.println("In each country, each team will compete two challenges.");
 			System.out.println("If one team wins both challenges, they win that country. BUT if there is a tie between the two games, there will be a tie breaking game. Winner of the tie breaker wins the country");
-			System.out.println("The team who wins the majority of the 5 countries wins the race.");
+			System.out.println("The team who wins the majority of the 3 countries wins the race.");
 		}
 		
 		public static void getTeams()
@@ -83,11 +83,4 @@ public class AmazingRaceRunner
 			System.out.println("Press enter to travel to your first country");
 			enterToTravel = stringInput.nextLine();
 		}
-		
-		
-
-		
-		
-		
-		
 	}

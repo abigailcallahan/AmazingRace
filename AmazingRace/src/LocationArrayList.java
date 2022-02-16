@@ -8,6 +8,7 @@ public class LocationArrayList
 		public static void fillList()
 		{
 			countries.add(new Location("Ireland", "Number Guessing Game", "Find the Letter",  "Unscramble"));
-			//countries.add(new Location("Greece", ))
+			countries.add(new Location("Greece", "Hangman", "Trivia", "Unscramble" ));
+		
 		}
 	}

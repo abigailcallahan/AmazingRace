@@ -8,6 +8,7 @@ public class TravelRunner
 		static Scanner intInput = new Scanner(System.in);
 		
 		static String enter;
+		static String enter2;
 		static String enterStats;
 		static String enterTie;
 		static String enterCon;
@@ -20,6 +21,7 @@ public class TravelRunner
 			System.out.println("The first game that both teams will play is: " + LocationArrayList.countries.get(0).getGame1());
 			
 			//IRELAND
+			
 			//which is number guessing game 
 			NumberGuessingGame.playNGG();
 			System.out.println("So far, in Ireland, team 1 wins is: " + NumberGuessingGame.irelandWins1 + " and team 2 wins is: " + NumberGuessingGame.irelandWins2);
@@ -38,6 +40,14 @@ public class TravelRunner
 			
 			//GREECE
 			
+			System.out.println("You landed in: " + LocationArrayList.countries.get(0).getCountry());
+			System.out.println("The first game that both teams will play is: " + LocationArrayList.countries.get(0).getGame1());
+			//hangman
+			HangmanRunner.hangmanRunner();
+			//System.out.println("So far, in Greece, team 1 wins is: " + NumberGuessingGame.irelandWins1 + " and team 2 wins is: " + NumberGuessingGame.irelandWins2);
+			//System.out.println("Press enter to play our next game");
+			//enter2 = stringInput.nextLine();
+			
 			
 			
 		}
@@ -49,8 +59,8 @@ public class TravelRunner
 				enterStats = stringInput.nextLine();
 				
 				System.out.println();
-				System.out.println("Team 1 has " + NumberGuessingGame.irelandWins1 + " wins in " + LocationArrayList.countries.get(0).getCountry());
-				System.out.println("Team 2 has " + NumberGuessingGame.irelandWins2 + " wins in " + LocationArrayList.countries.get(0).getCountry());
+				System.out.println("Team 1 wins in " + LocationArrayList.countries.get(0).getCountry() + ": " +NumberGuessingGame.irelandWins1);
+				System.out.println("Team 2 wins in " + LocationArrayList.countries.get(0).getCountry() + ": " +NumberGuessingGame.irelandWins2);
 				
 				if(NumberGuessingGame.irelandWins1 > NumberGuessingGame.irelandWins2)
 					{
@@ -64,8 +74,7 @@ public class TravelRunner
 					}
 				else
 					{
-						System.out.println("There was a tie between the two games so we move on to the tie game! Press enter to move to the tie game");
-						enterTie = stringInput.nextLine();
+						System.out.println("There was a tie between the two games so we move on to the tie game!");
 						Unscramble.unscramble();
 					}
 			}
@@ -76,7 +85,7 @@ public class TravelRunner
 				System.out.println();
 				System.out.println("Before we move into the next country let's recap");
 				System.out.println("\tTeam 1 country wins: " + AmazingRaceRunner.team1.getCountryWins());
-				System.out.println("\tTeam 2 country wins: " + AmazingRaceRunner.team1.getCountryWins());
+				System.out.println("\tTeam 2 country wins: " + AmazingRaceRunner.team2.getCountryWins());
 				
 				System.out.println("Press enter to travel to our next country in the race");
 				enterCon = stringInput.nextLine();
