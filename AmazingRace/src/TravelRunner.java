@@ -25,7 +25,7 @@ public class TravelRunner
 			//which is number guessing game 
 			NumberGuessingGame.playNGG();
 			System.out.println("So far, in Ireland, team 1 wins is: " + NumberGuessingGame.irelandWins1 + " and team 2 wins is: " + NumberGuessingGame.irelandWins2);
-			System.out.println("Press enter to play our next game");
+			System.out.println("Press enter to play our second game");
 			enter = stringInput.nextLine();
 			System.out.println("Our next game in " + LocationArrayList.countries.get(0).getCountry() + " is " + LocationArrayList.countries.get(0).getGame2());
 			System.out.println();
@@ -43,11 +43,12 @@ public class TravelRunner
 			System.out.println("You landed in: " + LocationArrayList.countries.get(0).getCountry());
 			System.out.println("The first game that both teams will play is: " + LocationArrayList.countries.get(0).getGame1());
 			//hangman
-			HangmanRunner.hangmanRunner();
-			//System.out.println("So far, in Greece, team 1 wins is: " + NumberGuessingGame.irelandWins1 + " and team 2 wins is: " + NumberGuessingGame.irelandWins2);
-			//System.out.println("Press enter to play our next game");
-			//enter2 = stringInput.nextLine();
-			
+			//HangmanRunner.hangmanRunner();
+			//System.out.println("So far, in " + LocationArrayList.countries.get(0).getCountry() + " team 1 wins is: " + NumberGuessingGame.irelandWins1 + " and team 2 wins is: " + NumberGuessingGame.irelandWins2);
+			System.out.println("Press enter to play our second game");
+			enter2 = stringInput.nextLine();
+			System.out.println("Our next game in " + LocationArrayList.countries.get(0).getCountry() + " is " + LocationArrayList.countries.get(0).getGame2());
+			TriviaRunner.triviaRunner();
 			
 			
 		}

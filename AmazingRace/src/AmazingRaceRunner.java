@@ -28,13 +28,14 @@ public class AmazingRaceRunner
 		public static void main(String[] args) throws IOException
 			{
 				UnscrambleArrayList.fillUnscrambleWords();
+				Trivia.fillList();
 				
 				//intro();
 				//getTeams();
 				//TravelRunner.travel();
-				
+			
 				//TEST
-				HangmanRunner.hangmanRunner();
+				TriviaRunner.triviaRunner();
 			//DONT ADD ANYTHING ELSE HERE BECAUSE ITS ALL IN TRAVEL RUNNER CLASS
 				
 				

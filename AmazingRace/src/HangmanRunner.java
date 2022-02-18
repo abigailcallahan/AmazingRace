@@ -4,9 +4,17 @@ public class HangmanRunner
 	{
 		static Scanner stringInput = new Scanner(System.in);
 		static String enter;
+		
 		static String word;
+		
 		static String guess;
 		static String lettersGuessed = " ";
+		
+		static boolean notGuessed = true;
+		static int counter;
+		
+		static int greeceWins = 0;
+		static int greeceWins2 = 0;
 		
 		
 		static String[] wordArray = new String[8];
@@ -18,24 +26,52 @@ public class HangmanRunner
 			
 			System.out.println();
 			System.out.println();
-			System.out.println("Welcome to Hangman! Team 1 will take one turn, and then Team 2 will go. Whoever guesses the word first wins. I am giving you both the same word");
+			System.out.println("Welcome to Hangman! Team 1 will guess their word, and then Team 2 will go. Whoever guesses the word in the least amount of tries wins.");
 			
 			System.out.println("press enter to start!");
 			enter = stringInput.nextLine();
 			
-			do
+			word = Hangman.hangmanList.get(0).getWord();
+			
+//			while(!wordArray[0].equals(word.substring(0,1)) && !wordArray[1].equals(word.substring(1,2)) && !wordArray[2].equals(word.substring(2,3)) && !wordArray[3].equals(word.substring(3,4)) && 
+//					!wordArray[4].equals(word.substring(4,5)) && !wordArray[5].equals(word.substring(5,6)) && !wordArray[6].equals(word.substring(6,7)) && !wordArray[7].equals(word.substring(7)))
+			while(notGuessed == true)
 				{
-					play();
+					display();
 					t1Guess();
 					check();
 					lettersGuessed += guess;
-					play();
+					for(int i  = 0; i < wordArray.length; i++)
+						{
+							if(wordArray[i].equals(word.substring(i, i+1)))
+								{
+									counter++;
+								}
+						}
+					if(counter == 8)
+						{
+							notGuessed = false;
+							System.exit(0);
+						}
+					display();
 					t2Guess();
 					check();
 					lettersGuessed += guess;
+					for(int i  = 0; i < wordArray.length; i++)
+						{
+							if(wordArray[i].equals(word.substring(i, i+1)))
+								{
+									counter++;
+								}
+						}
+					if(counter == 8)
+						{
+							notGuessed = false;
+							System.exit(0);
+						}
+					
 				}
-			while(!wordArray[0].equals(word.substring(0,1)) && !wordArray[1].equals(word.substring(1,2)) && !wordArray[2].equals(word.substring(2,3)) && !wordArray[3].equals(word.substring(3,4)) && 
-					!wordArray[4].equals(word.substring(4,5)) && !wordArray[5].equals(word.substring(5,6)) && !wordArray[6].equals(word.substring(6,7)) && !wordArray[7].equals(word.substring(7)));
+			
 			
 			
 			//System.out.println("The word was guessed!");
@@ -56,7 +92,7 @@ public class HangmanRunner
 			wordArray[7] = "_ ";
 		}
 		
-		public static void play()
+		public static void display()
 		{
 			//display
 			System.out.println();
@@ -76,14 +112,12 @@ public class HangmanRunner
 		
 		public static void check()
 		{
-			word = Hangman.hangmanList.get(0).getWord();
-			
 			for(int i = 0; i < word.length();i++)
 				{
 					if(guess.equals(word.substring(i, i+1)))
 						{
 							System.out.println("You got it!");
-							wordArray[i] = guess + " ";
+							wordArray[i] = guess;
 						}
 				}
 		}
