@@ -50,6 +50,11 @@ public class TravelRunner
 			System.out.println("Our next game in " + LocationArrayList.countries.get(0).getCountry() + " is " + LocationArrayList.countries.get(0).getGame2());
 			TriviaRunner.triviaRunner();
 			
+			tieGame();
+			statsAndContinue();
+			
+			System.out.println("Ok, you are done with your second country in this race, congrats!");
+			
 			
 		}
 		

@@ -105,6 +105,7 @@ public class FindLetter
 				}
 			else
 				{
+					System.out.println("There was a tie no one wins");
 				}
 		}
 		

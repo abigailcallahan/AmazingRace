@@ -8,6 +8,8 @@ public class HangmanRunner
 		static String word;
 		
 		static String guess;
+		static String guess2;
+		
 		static String lettersGuessed = " ";
 		
 		static boolean notGuessed = true;
@@ -39,8 +41,9 @@ public class HangmanRunner
 				{
 					display();
 					t1Guess();
-					check();
+					check1();
 					lettersGuessed += guess;
+					counter = 0;
 					for(int i  = 0; i < wordArray.length; i++)
 						{
 							if(wordArray[i].equals(word.substring(i, i+1)))
@@ -50,31 +53,44 @@ public class HangmanRunner
 						}
 					if(counter == 8)
 						{
-							notGuessed = false;
-							System.exit(0);
-						}
-					display();
-					t2Guess();
-					check();
-					lettersGuessed += guess;
-					for(int i  = 0; i < wordArray.length; i++)
-						{
-							if(wordArray[i].equals(word.substring(i, i+1)))
+							System.out.println();
+							for(int i = 0; i < wordArray.length; i++)
 								{
-									counter++;
+								System.out.print(wordArray[i]);
+								 }
+							notGuessed = false;
+							//System.exit(0);
+						}
+						while(notGuessed == true)
+						{
+							display();
+							t2Guess();
+							check2();
+							lettersGuessed += guess2;
+							counter = 0;
+							for(int i  = 0; i < wordArray.length; i++)
+								{
+									if(wordArray[i].equals(word.substring(i, i+1)))
+										{
+											counter++;
+										}
+								}
+							if(counter == 8)
+								{
+									System.out.println();
+									for(int i = 0; i < wordArray.length; i++)
+										{
+										System.out.print(wordArray[i]);
+										}
+									notGuessed = false;
+									//System.exit(0);
 								}
 						}
-					if(counter == 8)
-						{
-							notGuessed = false;
-							System.exit(0);
-						}
+					
 					
 				}
 			
-			
-			
-			//System.out.println("The word was guessed!");
+			System.out.println("\n\nThe word was guessed!");
 			
 			//hangmanWinner();
 			
@@ -110,7 +126,7 @@ public class HangmanRunner
 			guess = stringInput.nextLine();
 		}
 		
-		public static void check()
+		public static void check1()
 		{
 			for(int i = 0; i < word.length();i++)
 				{
@@ -122,20 +138,27 @@ public class HangmanRunner
 				}
 		}
 		
+		public static void check2()
+		{
+			for(int i = 0; i < word.length();i++)
+			{
+				if(guess2.equals(word.substring(i, i+1)))
+					{
+						System.out.println("You got it!");
+						wordArray[i] = guess2;
+					}
+			}
+		}
+		
 		public static void t2Guess()
 		{
 			System.out.println();
 			System.out.println("Team 2, your turn, what is the first letter guess?");
-			guess = stringInput.nextLine();
+			guess2 = stringInput.nextLine();
 		}
 		
 		public static void hangmanWinner()
 		{
 			
-		}
-		
-		
-		
-		
-		
+		}	
 	}

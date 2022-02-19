@@ -16,12 +16,23 @@ public class TriviaRunner
 		
 		static int answer1;
 		static int answer2;
+		static int tie1;
+		static int tie2;
 		
 		static int correct = 0;
 		static int correct2 = 0;
 		
 		static int random;
 		static int random2;
+		
+		
+		static double preT1;
+		static double preT2;
+		static double postT1;
+		static double postT2;
+		static double finalT1;
+		static double finalT2;
+		
 		
 		public static void triviaRunner()
 		{
@@ -135,13 +146,13 @@ public class TriviaRunner
 								
 								if(answer2 == 1)
 									{
-										System.out.println("Correct!");
+										System.out.println("Correct!\n");
 										correct2 ++;
 										Trivia.triviaList.remove(random);
 									}
 								else
 									{
-										System.out.println("Incorrect!");
+										System.out.println("Incorrect!\n");
 										Trivia.triviaList.remove(random);
 									}
 							}
@@ -156,17 +167,17 @@ public class TriviaRunner
 								
 								if(answer2 == 2)
 									{
-										System.out.println("Correct!");
+										System.out.println("Correct!\n");
 										correct2 ++;
 										Trivia.triviaList.remove(random);
 									}
 								else
 									{
-										System.out.println("Incorrect!");
+										System.out.println("Incorrect!\n");
 										Trivia.triviaList.remove(random);
 									}
 							}
-						else
+						else if(Trivia.triviaList.get(random).getIntCorrect() == 3)
 							{
 								System.out.println("\t1) " + Trivia.triviaList.get(random).getOption2());
 								System.out.println("\t2) " + Trivia.triviaList.get(random).getOption1());
@@ -175,15 +186,15 @@ public class TriviaRunner
 								System.out.println("What is your guess?");
 								answer2 = intInput.nextInt();
 								
-								if(answer1 == 3)
+								if(answer2 == 3)
 									{
-										System.out.println("Correct!");
+										System.out.println("Correct!\n");
 										correct2 ++;
 										Trivia.triviaList.remove(random);
 									}
 								else
 									{
-										System.out.println("Incorrect!");
+										System.out.println("Incorrect!\n");
 										Trivia.triviaList.remove(random);
 									}
 							}
@@ -216,9 +227,85 @@ public class TriviaRunner
 		public static void tieTrivia()
 		{
 			System.out.println("\nI am going to give a final question each. Team 1 will go first. The timer starts the answer the question. Team 2 goes next. Whoever finishes their question first wins");
-			System.out.println("TEAM 1: Press enter to start ");
+			System.out.println("TEAM 1: Press enter to start the timer ");
 			enter3 = stringInput.nextLine();
+			
+			t1Tie();
+			System.out.println("\nTEAM 2: Press enter to start the timer ");
+			enter4 = stringInput.nextLine();
+			t2Tie();
+		
+			tieWinner();
+			
 		}
 	
+		public static void t1Tie()
+		{
+			System.out.println("\nWhat is the capital of Montana?");
+			System.out.println("\t1) Montana City");
+			System.out.println("\t2) Helena");
+			System.out.println("\t3) Bozeman");
+			
+			preT1 = System.currentTimeMillis();
+			tie1 = intInput.nextInt();
+			
+			while(tie1 != 2)
+			{
+				System.out.println("Try again");
+				tie1 = intInput.nextInt();
+			}
+			if(tie1 == 2)
+			{
+				postT1 = System.currentTimeMillis();
+				System.out.println("You got it!");
+			}
+			
+			finalT1 = (postT1 - preT1) / 1000;
+		}
+		
+		public static void t2Tie()
+		{
+			System.out.println("\nWhat is the capital of Nebraska");
+			System.out.println("\t1) Omaha");
+			System.out.println("\t2) Nebraska City");
+			System.out.println("\t3) Lincoln");
+			
+			preT2 = System.currentTimeMillis();
+			tie2 = intInput.nextInt();
+			
+			while(tie2 != 3)
+			{
+				System.out.println("Try again");
+				tie2 = intInput.nextInt();
+			}
+			if(tie2 == 3)
+			{
+				postT2 = System.currentTimeMillis();
+				System.out.println("You got it!");
+			}
+			
+			finalT2 = (postT2 - preT2) / 1000;
+		}
+		
+		public static void tieWinner()
+		{
+			if(finalT1 < finalT2)
+			{
+				System.out.println("\nTeam 1 finished faster with " + finalT1 + " seconds. Team 2 had " + finalT2 + " seconds");
+				System.out.println("Team 1 won the second game of Greece!");
+				HangmanRunner.greeceWins++;
+			}
+			else if(finalT1 > finalT2)
+			{
+				System.out.println("\nTeam 2 finished faster with " + finalT2 + " seconds. Team 1 had " + finalT1 + " seconds");
+				System.out.println("Team 2 won the second game of Greece!");
+				HangmanRunner.greeceWins2++;
+			}
+			else
+			{
+				System.out.println("There was another tie, no one wins");
+			}
+		}
+				
 	
 	}

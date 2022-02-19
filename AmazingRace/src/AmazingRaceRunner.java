@@ -18,24 +18,17 @@ public class AmazingRaceRunner
 		static String enterToTravel;
 		
 		
-		//NEED TO DECIDE ON TIE GAME IN FIND LETTER 
-		//PLAY AGAIN
-		//OR
-		//PLAY THE UNSCRAMBLE BUT HAVE TO FIX THE POINTS/COUNTRY ETC
-		
-		
-		
 		public static void main(String[] args) throws IOException
 			{
 				UnscrambleArrayList.fillUnscrambleWords();
 				Trivia.fillList();
 				
-				//intro();
-				//getTeams();
-				//TravelRunner.travel();
+//				intro();
+//				getTeams();
+//				TravelRunner.travel();
+				
+				HangmanRunner.hangmanRunner();
 			
-				//TEST
-				TriviaRunner.triviaRunner();
 			//DONT ADD ANYTHING ELSE HERE BECAUSE ITS ALL IN TRAVEL RUNNER CLASS
 				
 				
@@ -64,10 +57,10 @@ public class AmazingRaceRunner
 		public static void rules()
 		{
 			System.out.println("So here is how it works: ");
-			System.out.println("There is two teams, and 5 different countries. ");
+			System.out.println("There is two teams, and 2 different countries. ");
 			System.out.println("In each country, each team will compete two challenges.");
 			System.out.println("If one team wins both challenges, they win that country. BUT if there is a tie between the two games, there will be a tie breaking game. Winner of the tie breaker wins the country");
-			System.out.println("The team who wins the majority of the 3 countries wins the race.");
+			System.out.println("The team who wins the majority of the 2 countries wins the race. If a team each wins one country, then we go to a final unscramble tie game");
 		}
 		
 		public static void getTeams()
