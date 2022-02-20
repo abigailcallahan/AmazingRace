@@ -23,11 +23,10 @@ public class AmazingRaceRunner
 				UnscrambleArrayList.fillUnscrambleWords();
 				Trivia.fillList();
 				
-//				intro();
-//				getTeams();
-//				TravelRunner.travel();
+				intro();
+				getTeams();
+				TravelRunner.travel();
 				
-				HangmanRunner.hangmanRunner();
 			
 			//DONT ADD ANYTHING ELSE HERE BECAUSE ITS ALL IN TRAVEL RUNNER CLASS
 				

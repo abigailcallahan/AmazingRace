@@ -36,9 +36,10 @@ public class NumberGuessingGame
 				
 				do
 					{
-						counter1++;
+						
 						System.out.println("Guess the number: ");
 						guess1 = intInput.nextInt();
+						counter1++;
 					}
 				while(guess1 != secretNumber);
 				
@@ -59,9 +60,9 @@ public class NumberGuessingGame
 				
 				do
 					{
-						counter2++;
 						System.out.println("Guess the number: ");
 						guess2 = intInput.nextInt();
+						counter2++;
 					}
 				while(guess2 != secretNumber2);
 				

@@ -101,13 +101,13 @@ public class Unscramble
 		{
 			if(finalTime1 < finalTime2)
 				{
-					System.out.println("Team 1 finished their word faster, so they win the country!");
+					System.out.println("Team 1 finished their word faster, so they win!");
 					AmazingRaceRunner.team1.setCountryWins(AmazingRaceRunner.team1.getCountryWins() + 1);
 					
 				}
 			else if(finalTime1 > finalTime2)
 				{
-					System.out.println("Team 2 finished their word faster, so they win the country");
+					System.out.println("Team 2 finished their word faster, so they win!");
 					AmazingRaceRunner.team2.setCountryWins(AmazingRaceRunner.team2.getCountryWins() + 1);
 				}
 			else

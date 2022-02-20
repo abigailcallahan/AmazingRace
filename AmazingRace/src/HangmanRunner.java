@@ -4,6 +4,7 @@ public class HangmanRunner
 	{
 		static Scanner stringInput = new Scanner(System.in);
 		static String enter;
+		static String enter2;
 		
 		static String word;
 		
@@ -13,11 +14,14 @@ public class HangmanRunner
 		static String lettersGuessed = " ";
 		
 		static boolean notGuessed = true;
-		static int counter;
 		
 		static int greeceWins = 0;
 		static int greeceWins2 = 0;
 		
+		static int counter;
+		
+		static boolean team1GuessedIt = false;
+		static boolean team2GuessedIt = false;
 		
 		static String[] wordArray = new String[8];
 		
@@ -35,8 +39,6 @@ public class HangmanRunner
 			
 			word = Hangman.hangmanList.get(0).getWord();
 			
-//			while(!wordArray[0].equals(word.substring(0,1)) && !wordArray[1].equals(word.substring(1,2)) && !wordArray[2].equals(word.substring(2,3)) && !wordArray[3].equals(word.substring(3,4)) && 
-//					!wordArray[4].equals(word.substring(4,5)) && !wordArray[5].equals(word.substring(5,6)) && !wordArray[6].equals(word.substring(6,7)) && !wordArray[7].equals(word.substring(7)))
 			while(notGuessed == true)
 				{
 					display();
@@ -59,9 +61,9 @@ public class HangmanRunner
 								System.out.print(wordArray[i]);
 								 }
 							notGuessed = false;
-							//System.exit(0);
+							team1GuessedIt = true;
 						}
-						while(notGuessed == true)
+						if(notGuessed == true)
 						{
 							display();
 							t2Guess();
@@ -83,16 +85,15 @@ public class HangmanRunner
 										System.out.print(wordArray[i]);
 										}
 									notGuessed = false;
-									//System.exit(0);
+									team2GuessedIt = true;
 								}
 						}
-					
 					
 				}
 			
 			System.out.println("\n\nThe word was guessed!");
 			
-			//hangmanWinner();
+			hangmanWinner();
 			
 		}
 		
@@ -159,6 +160,22 @@ public class HangmanRunner
 		
 		public static void hangmanWinner()
 		{
+			System.out.println();
+			System.out.println();
 			
+			if(team1GuessedIt == true)
+			{
+				System.out.println("Team 1 had the final winning guess so they win");
+				greeceWins++;
+			}
+			else if(team2GuessedIt == true)
+			{
+				System.out.println("Team 2 had the final winning guess so they win");
+				greeceWins2++;
+			}
+			else
+			{
+				System.out.println("It was a tie, no one wins");
+			}
 		}	
 	}

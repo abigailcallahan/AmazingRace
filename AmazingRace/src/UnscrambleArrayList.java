@@ -6,17 +6,19 @@ public class UnscrambleArrayList
 		
 		public static void fillUnscrambleWords()
 		{
-			//4 letters
-			unscrambleWords.add(new Word("frog", "ofgr"));
-			unscrambleWords.add(new Word("snow", "wons"));
-			unscrambleWords.add(new Word("star", "tars"));
-			unscrambleWords.add(new Word("book", "okob"));
 			
 			//5 letters
 			unscrambleWords.add(new Word("grass", "srsga"));
 			unscrambleWords.add(new Word("bloom", "omlob"));
 			unscrambleWords.add(new Word("green", "ergen"));
+			unscrambleWords.add(new Word("mouse", "souem"));
+			
+			//4 letters
 			unscrambleWords.add(new Word("frog", "ofgr"));
+			unscrambleWords.add(new Word("snow", "wons"));
+			unscrambleWords.add(new Word("star", "tars"));
+			unscrambleWords.add(new Word("book", "okob"));
+
 			
 			//6letters
 			unscrambleWords.add(new Word("flower", "orelwf"));
