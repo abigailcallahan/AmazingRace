@@ -32,7 +32,7 @@ public class HangmanRunner
 			
 			System.out.println();
 			System.out.println();
-			System.out.println("Welcome to Hangman! Team 1 will guess their word, and then Team 2 will go. Whoever guesses the word in the least amount of tries wins.");
+			System.out.println("Welcome to Hangman! Team 1 will guess their word, and then Team 2 will go. Whoever guesses the word first wins.");
 			
 			System.out.println("press enter to start!");
 			enter = stringInput.nextLine();
