@@ -29,7 +29,6 @@ public class HangmanRunner
 		{
 			Hangman.fillHangman();
 			fillArray();
-			
 			System.out.println();
 			System.out.println();
 			System.out.println("Welcome to Hangman! Team 1 will guess their word, and then Team 2 will go. Whoever guesses the word first wins.");
