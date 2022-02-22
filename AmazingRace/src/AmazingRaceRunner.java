@@ -11,7 +11,6 @@ public class AmazingRaceRunner
 		static int ruleDecision;
 		static Team team1;
 		static String team1name;
-		
 		static Team team2;
 		static String team2name;
 		static String enterToStart;
@@ -22,21 +21,14 @@ public class AmazingRaceRunner
 			{
 				UnscrambleArrayList.fillUnscrambleWords();
 				Trivia.fillList();
-				
 				intro();
 				getTeams();
 				TravelRunner.travel();
-				
-			
-			//DONT ADD ANYTHING ELSE HERE BECAUSE ITS ALL IN TRAVEL RUNNER CLASS
-				
-				
 			}
 		
 		public static void intro()
 		{
 			System.out.println("Hello and welcome to: THE AMAZING RACE!");
-			//option to see the rules
 			System.out.println("would you like to 1) see the rules or 2) start the game right away?");
 			ruleDecision = intInput.nextInt();
 			if(ruleDecision == 1)

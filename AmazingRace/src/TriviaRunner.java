@@ -306,6 +306,4 @@ public class TriviaRunner
 				System.out.println("There was another tie, no one wins");
 			}
 		}
-				
-	
 	}
