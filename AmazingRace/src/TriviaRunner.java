@@ -41,7 +41,6 @@ public class TriviaRunner
 			team1();
 			System.out.println("Ok team 2, your turn");
 			team2();
-			
 			winner();
 		}
 		
@@ -119,7 +118,6 @@ public class TriviaRunner
 									Trivia.triviaList.remove(random);
 								}
 						}
-					
 				}
 			
 			System.out.println("Ok, team 1 your number of correct guesses is: " + correct);
@@ -182,7 +180,6 @@ public class TriviaRunner
 								System.out.println("\t1) " + Trivia.triviaList.get(random).getOption2());
 								System.out.println("\t2) " + Trivia.triviaList.get(random).getOption1());
 								System.out.println("\t3) " + Trivia.triviaList.get(random).getAnswer());
-								
 								System.out.println("What is your guess?");
 								answer2 = intInput.nextInt();
 								
@@ -229,12 +226,10 @@ public class TriviaRunner
 			System.out.println("\nI am going to give a final question each. Team 1 will go first. The timer starts the answer the question. Team 2 goes next. Whoever finishes their question first wins");
 			System.out.println("TEAM 1: Press enter to start the timer ");
 			enter3 = stringInput.nextLine();
-			
 			t1Tie();
 			System.out.println("\nTEAM 2: Press enter to start the timer ");
 			enter4 = stringInput.nextLine();
 			t2Tie();
-		
 			tieWinner();
 			
 		}
@@ -259,7 +254,6 @@ public class TriviaRunner
 				postT1 = System.currentTimeMillis();
 				System.out.println("You got it!");
 			}
-			
 			finalT1 = (postT1 - preT1) / 1000;
 		}
 		

@@ -22,7 +22,6 @@ public class TravelRunner
 			System.out.println("The first game that both teams will play is: " + LocationArrayList.countries.get(0).getGame1());
 			
 			//IRELAND
-			
 			//which is number guessing game 
 			NumberGuessingGame.playNGG();
 			System.out.println("So far, in Ireland, team 1 wins is: " + NumberGuessingGame.irelandWins1 + " and team 2 wins is: " + NumberGuessingGame.irelandWins2);
@@ -40,7 +39,6 @@ public class TravelRunner
 			LocationArrayList.countries.remove(0);
 			
 			//GREECE
-			
 			System.out.println("You landed in: " + LocationArrayList.countries.get(0).getCountry());
 			System.out.println("The first game that both teams will play is: " + LocationArrayList.countries.get(0).getGame1());
 			//hangman
@@ -63,7 +61,6 @@ public class TravelRunner
 			{
 				System.out.println("\n\nPress enter to finish this country and see stats");
 				enterStats = stringInput.nextLine();
-				
 				System.out.println();
 				System.out.println("Team 1 wins in " + LocationArrayList.countries.get(0).getCountry() + ": " +NumberGuessingGame.irelandWins1);
 				System.out.println("Team 2 wins in " + LocationArrayList.countries.get(0).getCountry() + ": " +NumberGuessingGame.irelandWins2);
@@ -112,8 +109,6 @@ public class TravelRunner
 				}
 		}
 		
-		
-		
 		public static void statsAndContinue()
 			{
 				System.out.println();
@@ -121,7 +116,6 @@ public class TravelRunner
 				System.out.println("Before we continue the race let's recap");
 				System.out.println("\tTeam 1 country wins: " + AmazingRaceRunner.team1.getCountryWins());
 				System.out.println("\tTeam 2 country wins: " + AmazingRaceRunner.team2.getCountryWins());
-				
 				System.out.println("Press enter to continue");
 				enterCon = stringInput.nextLine();
 				
@@ -152,7 +146,6 @@ public class TravelRunner
 				if(Unscramble.finalTime1 < Unscramble.finalTime2)
 				{
 					System.out.println("TEAM 1 WINS THE RACE");
-					
 				}
 				else if(Unscramble.finalTime1 > Unscramble.finalTime2)
 				{
