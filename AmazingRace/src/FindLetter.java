@@ -3,7 +3,6 @@ import java.io.File;
 import java.io.IOException;
 
 
-
 public class FindLetter
 	{
 		static Scanner stringInput = new Scanner(System.in);
